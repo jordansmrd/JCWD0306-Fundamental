@@ -139,7 +139,7 @@ for (let i = 0; i < number; i++) {
  star = '';
 
  for (let j = 0; j < number; j++) {
-  star += '*';
+  star += '*'; // 4x ****
  }
  console.log(star);
 }
@@ -150,9 +150,19 @@ for (let i = 0; i < number; i++) {
 //  ****
 console.log();
 
+// baris
+
+// *
+// **
+// ***
+// ****
+
 for (let i = 0; i < number; i++) {
  star = '';
+ // i = 1
  for (let j = 0; j <= i; j++) {
+  // i = 0 , j = 0.
+  // 0 <= 1 , 1 <=1
   star += '*';
  }
  console.log(star);
@@ -163,12 +173,21 @@ for (let i = 0; i < number; i++) {
 //    **
 //     *
 
+//
+
 console.log();
+// *****
+//  ****
+//   ***
+//    **
+//     *
 
 for (let i = 0; i < number; i++) {
  star = '';
-
  for (let j = 0; j < number; j++) {
+  // i = 2 , j =0
+  // 0< 5
+
   if (j < i) star += ' ';
   else star += '*';
  }
@@ -214,10 +233,13 @@ for (let i = 0; i < number; i++) {
 //    * * *
 //   * * * *
 
+//
+
 for (let i = 0; i < number; i++) {
  star = '';
  for (let j = 0; j < number; j++) {
   if (number - i > j) star += ' ';
+  //5 >
   else star += '* ';
  }
 
