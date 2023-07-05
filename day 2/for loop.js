@@ -39,9 +39,4 @@ do {
  counter++;
 } while (counter <= 10);
 
-// menghitung biaya parkir
-// kendaraan = mobil/motor
-// 1 jam pertama mobil = 3000 => 2000
-// 1 jam pertama motor = 2000 => 1000
 
-// motor , 3 jam , total 4000

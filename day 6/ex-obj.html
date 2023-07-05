@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+ </head>
+ <body></body>
+ <script>
+  //javascript
+  //   prompt('ini isi prompt'); //function menerima input dari user, parameter adalah string yang dimunculkan di dalam prompt
+  //   alert('ini isi alert'); //function untuk mengirimkan informasi dalam bentuk string
+  let pilihan = ' '; //truthy
+  let arrayUser = [];
+
+  while (pilihan) {
+   pilihan = prompt('1.login\n2.register\n3.exit');
+   //    if (pilihan == 3) break;
+
+   let newUser = {};
+   switch (pilihan) {
+    case '1':
+     let email = prompt('isi email untuk login');
+     let password = prompt('isi password untuk login');
+     let cek = arrayUser.find(
+      (user) => user.email == email && user.password == password
+     );
+     if (cek) alert(`hello ${cek.email}`); //hello@mail.com
+     else alert('email/password anda salah');
+     //cek apakah terdapat email dan password yg diketik di dalam arrayUser
+     break;
+
+    case '2':
+     newUser.email = prompt('isi email anda'); //udin@mail.com
+     newUser.password = prompt('isi password anda'); //abc123
+     // newUser = { email : "udin@mail.com", password : "abc123"}
+     arrayUser.push(newUser);
+     alert(`terdapat ${arrayUser.length} user yang berhasil daftar `);
+     break;
+    case '3':
+     pilihan = ''; // supaya keluar dari looping
+     break;
+    default:
+     alert('pilihan tidak sesuai');
+   }
+
+   console.log(arrayUser);
+  }
+
+  //menu prompt
+  // 1. login
+  // 2. register
+
+  //simple register dan login
+  //user harus register lewat email dan password disimpan di dalam sebuah object
+  //alert selamat anda berhasil register
+ </script>
+</html>
