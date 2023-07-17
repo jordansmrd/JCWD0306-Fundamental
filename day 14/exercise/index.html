@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>calculator</title>
+ </head>
+ <body></body>
+ <script src="./index.js"></script>
+ <script>
+  //   let number1 = calculator.hasil;
+  let number2 = 0;
+  let log = 'History : \n';
+
+  while (true) {
+   const pilihan = prompt(`Hasil : ${calculator.hasil}
+   Pilih Menu:
+        + Penjumlahan
+        - Pengurangan
+        : Pembagian
+        x Perkalian
+        pangkat2 Pangkat 2
+        akar2 Akar 2
+        akar3 Akar 3
+        log history`);
+
+   switch (pilihan) {
+    case '+':
+     calculator.hasil = Number(
+      prompt('silahkan masukan angka pertama anda', calculator.hasil)
+     );
+     number2 = Number(prompt('silahkan masukan angka kedua anda'));
+     log += `\n${
+      calculator.hasil
+     } ${pilihan} ${number2} = ${calculator.penjumlahan(number2)}`;
+
+     break;
+    case '-':
+     calculator.hasil = Number(
+      prompt('silahkan masukan angka pertama anda', calculator.hasil)
+     );
+     number2 = Number(prompt('silahkan masukan angka kedua anda'));
+     log += `\n${
+      calculator.hasil
+     } ${pilihan} ${number2} = ${calculator.pengurangan(number2)}`;
+
+     break;
+    case 'x':
+     calculator.hasil = Number(
+      prompt('silahkan masukan angka pertama anda', calculator.hasil)
+     );
+     number2 = Number(prompt('silahkan masukan angka kedua anda'));
+     log += `\n${
+      calculator.hasil
+     } ${pilihan} ${number2} = ${calculator.perkalian(number2)}`;
+
+     break;
+    case ':':
+     calculator.hasil = Number(
+      prompt('silahkan masukan angka pertama anda', calculator.hasil)
+     );
+     number2 = Number(prompt('silahkan masukan angka kedua anda'));
+     log += `\n${
+      calculator.hasil
+     } ${pilihan} ${number2} = ${calculator.pembagian(number2)}`;
+
+     break;
+    case 'pangkat2':
+     calculator.hasil = Number(
+      prompt('silahkan masukan angka pertama anda', calculator.hasil)
+     );
+     log += `\n${calculator.hasil} pangkat 2 = ${calculator.pangkat2(number2)}`;
+
+     break;
+    case 'akar2':
+     calculator.hasil = Number(
+      prompt('silahkan masukan angka pertama anda', calculator.hasil)
+     );
+     log += `\n${calculator.hasil} akar 2 =  ${calculator.akarPangkat2()}`;
+
+     break;
+    case 'akar3':
+     calculator.hasil = Number(
+      prompt('silahkan masukan angka pertama anda', calculator.hasil)
+     );
+     log += `\n${calculator.hasil} akar 3 =  ${calculator.akarPangkat3()}`;
+     break;
+    case 'log':
+     alert(log);
+     break;
+    default:
+     alert('tidak sesuai');
+   }
+  }
+ </script>
+</html>
